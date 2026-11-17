@@ -1,0 +1,66 @@
+<Window x:Class="curs.Views.Dialogs.PrintPreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Предпросмотр печати"
+        Width="850"
+        Height="600"
+        WindowStartupLocation="CenterOwner"
+        Background="White"
+        FontSize="14">
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- панель масштаба -->
+        <TextBlock Text="Предпросмотр печати" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,12" />
+
+        <!-- лист и настройки печати -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="220" />
+            </Grid.ColumnDefinitions>
+
+            <!-- макет на печатном листе -->
+            <Border Grid.Column="0" Background="#EEEEEE" BorderBrush="Gray" BorderThickness="1" Margin="0,0,12,0" Padding="20">
+                <Viewbox Stretch="Uniform">
+                    <Border Width="540" Height="300" Background="White" BorderBrush="Gray" BorderThickness="1" Padding="30">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="АННА СУМЦОВА" FontSize="24" FontWeight="Bold" />
+                            <TextBlock Text="Графический дизайнер" FontSize="16" Margin="0,6,0,0" />
+                            <TextBlock Text="СТУДИЯ ФОРМА" Margin="0,18,0,0" />
+                            <TextBlock Text="+7 900 000-00-00  |  anna@example.ru" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+                </Viewbox>
+            </Border>
+
+            <!-- параметры печати -->
+            <StackPanel Grid.Column="1" Margin="4,0,0,0">
+                <TextBlock Text="Параметры печати" FontWeight="Bold" Margin="0,0,0,12" />
+                <TextBlock Text="Принтер" />
+                <ComboBox SelectedIndex="0" Margin="0,4,0,12">
+                    <ComboBoxItem Content="Выбрать принтер..." />
+                </ComboBox>
+                <TextBlock Text="Копии" />
+                <TextBox Text="1" Margin="0,4,0,12" />
+                <TextBlock Text="Бумага" />
+                <ComboBox SelectedIndex="0" Margin="0,4,0,12">
+                    <ComboBoxItem Content="A4" />
+                    <ComboBoxItem Content="Letter" />
+                </ComboBox>
+                <CheckBox Content="Вписать в страницу" IsChecked="True" Margin="0,4,0,0" />
+            </StackPanel>
+        </Grid>
+
+        <!-- кнопки печати и закрытия -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+            <Button Content="Закрыть" Margin="0,0,8,0" />
+            <Button Content="Печать" />
+        </StackPanel>
+    </Grid>
+</Window>

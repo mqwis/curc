@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\zatway\Desktop\cursovoq\curs\curs\App.xaml
-11407045341
+5-1488919756
 
-16-1093718665
+20-31808367
 2121742373167
-MainWindow.xaml;
+MainWindow.xaml;Views\Dialogs\CreateBusinessCardWindow.xaml;Views\Dialogs\ExportWindow.xaml;Views\Dialogs\PrintPreviewWindow.xaml;Views\Dialogs\SaveTemplateWindow.xaml;
 
 True
 

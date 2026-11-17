@@ -1,0 +1,36 @@
+<Window x:Class="curs.Views.Dialogs.SaveTemplateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сохранить шаблон"
+        Width="420"
+        Height="330"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="White"
+        FontSize="14">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- заголовок окна -->
+        <TextBlock Text="Сохранить как шаблон" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,14" />
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Название шаблона" />
+            <TextBox Text="Мой шаблон" Margin="0,4,0,12" />
+            <TextBlock Text="Описание" />
+            <TextBox Text="" Height="65" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="0,4,0,8" />
+            <CheckBox Content="Сохранить расположение элементов" IsChecked="True" />
+        </StackPanel>
+
+        <!-- кнопки окна -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+            <Button Content="Отмена" Margin="0,0,8,0" />
+            <Button Content="Сохранить" />
+        </StackPanel>
+    </Grid>
+</Window>

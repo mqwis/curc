@@ -1,0 +1,77 @@
+<Window x:Class="curs.Views.Dialogs.CreateBusinessCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новая визитка"
+        Width="440"
+        Height="560"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="White"
+        FontSize="14">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- заголовок окна -->
+        <TextBlock Text="Создание визитки" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,16" />
+
+        <!-- основные параметры визитки -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="Название проекта" />
+                <TextBox Text="Моя визитка" Margin="0,4,0,12" />
+
+                <TextBlock Text="Размер визитки" />
+                <ComboBox SelectedIndex="0" Margin="0,4,0,12">
+                    <ComboBoxItem Content="90 × 50 мм — стандарт" />
+                    <ComboBoxItem Content="85 × 55 мм — европейский" />
+                    <ComboBoxItem Content="Пользовательский размер" />
+                </ComboBox>
+
+                <Grid Margin="0,0,0,12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="12" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Ширина, мм" />
+                        <TextBox Text="90" Margin="0,4,0,0" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Высота, мм" />
+                        <TextBox Text="50" Margin="0,4,0,0" />
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock Text="Ориентация" />
+                <ComboBox SelectedIndex="0" Margin="0,4,0,12">
+                    <ComboBoxItem Content="Альбомная" />
+                    <ComboBoxItem Content="Книжная" />
+                </ComboBox>
+
+                <TextBlock Text="Цвет фона" />
+                <TextBox Text="#FFFFFF" Margin="0,4,0,12" />
+
+                <TextBlock Text="Шаблон" />
+                <ComboBox SelectedIndex="0" Margin="0,4,0,12">
+                    <ComboBoxItem Content="Пустой макет" />
+                    <ComboBoxItem Content="Минимализм" />
+                    <ComboBoxItem Content="Теплый акцент" />
+                    <ComboBoxItem Content="Контраст" />
+                    <ComboBoxItem Content="Геометрия" />
+                    <ComboBoxItem Content="Светлый акцент" />
+                </ComboBox>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- кнопки окна -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,14,0,0">
+            <Button Content="Отмена" Margin="0,0,8,0" />
+            <Button Content="Создать" />
+        </StackPanel>
+    </Grid>
+</Window>
