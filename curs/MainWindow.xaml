@@ -208,7 +208,7 @@
                 <DockPanel Grid.Row="0" LastChildFill="False">
                     <TextBlock Text="Макет визитки" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" VerticalAlignment="Center" />
                     <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
-                        <TextBlock Text="90 × 50 мм" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" Margin="0,0,16,0" />
+                        <TextBlock Text="{Binding CardSize}" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" Margin="0,0,16,0" />
                         <TextBlock Text="−" FontSize="18" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
                         <TextBlock Text="100%" Foreground="{StaticResource InkBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
                         <TextBlock Text="+" FontSize="18" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" />
@@ -261,7 +261,7 @@
                         <TextBlock Text="Выбранный элемент" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" Margin="0,0,0,8" />
 
                         <TextBlock Text="Название" Foreground="{StaticResource MutedBrush}" />
-                        <TextBox Text="Имя и фамилия" Margin="0,4,0,10" />
+                        <TextBox Text="{Binding SelectedElementName, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" />
 
                         <TextBlock Text="Тип элемента" Foreground="{StaticResource MutedBrush}" />
                         <ComboBox SelectedIndex="0">
@@ -338,8 +338,8 @@
         <!-- строка состояния -->
         <Border Grid.Row="3" Background="#FFFFFF" BorderBrush="#DDE2DC" BorderThickness="0,1,0,0">
             <DockPanel Margin="14,0">
-                <TextBlock Text="Новый проект" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" />
-                <TextBlock DockPanel.Dock="Right" Text="Визитка 90 × 50 мм" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding ProjectName}" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" />
+                <TextBlock DockPanel.Dock="Right" Text="{Binding CardSize}" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Center" />
             </DockPanel>
         </Border>
     </Grid>
