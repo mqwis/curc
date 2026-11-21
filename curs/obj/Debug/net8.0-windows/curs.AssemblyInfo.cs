@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("curs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5df8316ede5a84713d67ff6defc8c127f932b2c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b9b27cddd98459876cde8e4287f2e105fcfc278")]
 [assembly: System.Reflection.AssemblyProductAttribute("curs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("curs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:curs"
         mc:Ignorable="d"
         Title="Визитки — редактор"
-        Height="820"
-        Width="1280"
-        MinHeight="650"
-        MinWidth="1000"
+        Height="720"
+        Width="1180"
+        MinHeight="600"
+        MinWidth="900"
         Background="#F1F3F0"
         FontFamily="Segoe UI"
         FontSize="13">
@@ -58,7 +58,9 @@
         <!-- верхнее меню -->
         <Border Grid.Row="0" Background="#FFFFFF" BorderBrush="#DDE2DC" BorderThickness="0,0,0,1">
             <DockPanel LastChildFill="True">
-                <TextBlock DockPanel.Dock="Right"
+                <!-- метка заголовка в верхней строке -->
+                <TextBlock x:Name="HeaderProjectLabel"
+                           DockPanel.Dock="Right"
                            Text="ПРОЕКТ  /  ВИЗИТКИ"
                            Foreground="{StaticResource MutedBrush}"
                            VerticalAlignment="Center"
@@ -93,7 +95,21 @@
                     <Button Content="Сохранить" Background="#176B58" Foreground="White" BorderBrush="#176B58" Margin="0" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Визитка" FontSize="16" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" VerticalAlignment="Center" Margin="0,0,18,0" />
+                    <!-- заголовок панели инструментов -->
+                    <TextBlock x:Name="EditorTitleLabel"
+                               Text="Визитка"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="{StaticResource InkBrush}"
+                               VerticalAlignment="Center"
+                               Margin="0,0,18,0" />
+                    <CheckBox x:Name="ShowHeadersCheckBox"
+                              Content="Показывать заголовки"
+                              IsChecked="True"
+                              VerticalAlignment="Center"
+                              Margin="0,0,12,0"
+                              Checked="ShowHeadersCheckBoxChanged"
+                              Unchecked="ShowHeadersCheckBoxChanged" />
                     <Button Content="Новая" Margin="0,0,6,0" />
                     <Button Content="Открыть" Margin="0,0,6,0" />
                     <Button Content="Текст" Margin="0,0,6,0" />
