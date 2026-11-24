@@ -8,4 +8,10 @@ public partial class SaveTemplateWindow : Window
     {
         InitializeComponent();
     }
+
+    // закрывает окно шаблона
+    private void CloseButtonClick(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
 }

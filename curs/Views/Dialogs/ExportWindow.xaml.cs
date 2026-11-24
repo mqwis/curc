@@ -8,4 +8,10 @@ public partial class ExportWindow : Window
     {
         InitializeComponent();
     }
+
+    // закрывает окно экспорта
+    private void CloseButtonClick(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
 }

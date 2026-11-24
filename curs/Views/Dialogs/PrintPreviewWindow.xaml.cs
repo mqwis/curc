@@ -8,4 +8,10 @@ public partial class PrintPreviewWindow : Window
     {
         InitializeComponent();
     }
+
+    // закрывает окно печати
+    private void CloseButtonClick(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
 }
