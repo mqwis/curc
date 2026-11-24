@@ -24,4 +24,13 @@ public partial class MainWindow : Window
             EditorTitleLabel.Visibility = Visibility.Collapsed;
         }
     }
+
+    // сбрасывает название выбранного элемента
+    private void ResetElementNameClick(object sender, RoutedEventArgs e)
+    {
+        if (DataContext is MainViewModel viewModel)
+        {
+            viewModel.SelectedElementName = "Имя и фамилия";
+        }
+    }
 }

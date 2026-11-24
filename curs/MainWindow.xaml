@@ -277,7 +277,13 @@
                         <TextBlock Text="Выбранный элемент" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" Margin="0,0,0,8" />
 
                         <TextBlock Text="Название" Foreground="{StaticResource MutedBrush}" />
-                        <TextBox Text="{Binding SelectedElementName, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10" />
+                        <TextBox x:Name="ElementNameTextBox"
+                                 Text="{Binding SelectedElementName, UpdateSourceTrigger=PropertyChanged}"
+                                 Margin="0,4,0,6" />
+                        <!-- возвращает стандартное название элемента -->
+                        <Button Content="Сбросить название"
+                                Margin="0,0,0,10"
+                                Click="ResetElementNameClick" />
 
                         <TextBlock Text="Тип элемента" Foreground="{StaticResource MutedBrush}" />
                         <ComboBox SelectedIndex="0">
