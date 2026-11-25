@@ -1,5 +1,8 @@
 namespace curs.Data.Models;
 
+/// <summary>
+/// описывает шаблон визитки
+/// </summary>
 public sealed class Template
 {
     public int Id { get; set; }

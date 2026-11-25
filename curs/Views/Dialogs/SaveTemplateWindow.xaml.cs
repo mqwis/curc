@@ -2,8 +2,12 @@ using System.Windows;
 
 namespace curs.Views.Dialogs;
 
+/// <summary>
+/// открывает окно сохранения шаблона
+/// </summary>
 public partial class SaveTemplateWindow : Window
 {
+    // открывает окно шаблона
     public SaveTemplateWindow()
     {
         InitializeComponent();

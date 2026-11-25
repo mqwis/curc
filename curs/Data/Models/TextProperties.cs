@@ -1,5 +1,8 @@
 namespace curs.Data.Models;
 
+/// <summary>
+/// хранит настройки текста
+/// </summary>
 public sealed class TextProperties
 {
     public int Id { get; set; }

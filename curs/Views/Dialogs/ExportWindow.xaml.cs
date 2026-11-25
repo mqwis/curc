@@ -2,8 +2,12 @@ using System.Windows;
 
 namespace curs.Views.Dialogs;
 
+/// <summary>
+/// открывает окно экспорта визитки
+/// </summary>
 public partial class ExportWindow : Window
 {
+    // открывает окно экспорта
     public ExportWindow()
     {
         InitializeComponent();

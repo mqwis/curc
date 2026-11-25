@@ -3,6 +3,9 @@ using System.Runtime.CompilerServices;
 
 namespace curs;
 
+/// <summary>
+/// хранит данные главного окна
+/// </summary>
 public sealed class MainViewModel : INotifyPropertyChanged
 {
     private string projectName = "Новый проект";
@@ -32,6 +35,7 @@ public sealed class MainViewModel : INotifyPropertyChanged
 
     public string CardSize => "Визитка 90 × 50 мм";
 
+    // сообщает окну об изменении свойства
     private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

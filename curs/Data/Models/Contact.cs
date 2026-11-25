@@ -1,5 +1,8 @@
 namespace curs.Data.Models;
 
+/// <summary>
+/// хранит данные контакта
+/// </summary>
 public sealed class Contact
 {
     public int Id { get; set; }

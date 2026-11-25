@@ -1,5 +1,8 @@
 namespace curs.Data.Models;
 
+/// <summary>
+/// хранит настройки изображения
+/// </summary>
 public sealed class ImageProperties
 {
     public int Id { get; set; }

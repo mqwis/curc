@@ -3,11 +3,15 @@ using curs.Data.Models;
 
 namespace curs.Data;
 
+/// <summary>
+/// предоставляет доступ к базе визиток
+/// </summary>
 public sealed class BusinessCardDbContext : DbContext
 {
     private const string DefaultConnectionString =
         "Host=localhost;Port=5432;Database=business_cards;Username=postgres;Password=123";
 
+    // создаёт контекст базы визиток
     public BusinessCardDbContext(DbContextOptions<BusinessCardDbContext> options)
         : base(options)
     {
@@ -20,6 +24,7 @@ public sealed class BusinessCardDbContext : DbContext
     public DbSet<TextProperties> TextProperties => Set<TextProperties>();
     public DbSet<Contact> Contacts => Set<Contact>();
 
+    // настраивает подключение к postgres
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
@@ -31,6 +36,7 @@ public sealed class BusinessCardDbContext : DbContext
         }
     }
 
+    // описывает таблицы и связи базы
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Template>(entity =>

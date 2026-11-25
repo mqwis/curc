@@ -1,5 +1,8 @@
 namespace curs.Data.Models;
 
+/// <summary>
+/// описывает элемент визитки
+/// </summary>
 public sealed class CardElement
 {
     public int Id { get; set; }

@@ -2,8 +2,12 @@
 
 namespace curs;
 
+/// <summary>
+/// главное окно редактора визиток
+/// </summary>
 public partial class MainWindow : Window
 {
+    // открывает главное окно и viewmodel
     public MainWindow()
     {
         InitializeComponent();

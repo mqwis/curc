@@ -1,5 +1,8 @@
 namespace curs.Data.Models;
 
+/// <summary>
+/// описывает одну визитку
+/// </summary>
 public sealed class BusinessCard
 {
     public int Id { get; set; }
