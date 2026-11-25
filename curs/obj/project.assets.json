@@ -2115,9 +2115,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zatway\\Desktop\\cursovoq\\curs\\curs\\curs.csproj",
+      "projectUniqueName": "C:\\Users\\zatway\\Desktop\\cursovoq\\curs\\curs\\curs_fclmk5zq_wpftmp.csproj",
       "projectName": "curs",
-      "projectPath": "C:\\Users\\zatway\\Desktop\\cursovoq\\curs\\curs\\curs.csproj",
+      "projectPath": "C:\\Users\\zatway\\Desktop\\cursovoq\\curs\\curs\\curs_fclmk5zq_wpftmp.csproj",
       "packagesPath": "C:\\Users\\zatway\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\zatway\\Desktop\\cursovoq\\curs\\curs\\obj\\",
       "projectStyle": "PackageReference",

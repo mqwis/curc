@@ -1,6 +1,7 @@
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\curs.exe
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\curs.deps.json
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\curs.runtimeconfig.json
+C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\curs.runtimeconfig.dev.json
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\curs.dll
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\curs.pdb
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\Humanizer.dll
@@ -85,10 +86,12 @@ C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\tr\Microsoft
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\zatway\Desktop\cursovoq\curs\curs\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\curs.csproj.AssemblyReference.cache
+C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\CreateBusinessCardWindow.baml
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\ExportWindow.baml
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\PrintPreviewWindow.baml
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\SaveTemplateWindow.baml
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\CreateBusinessCardWindow.g.cs
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\ExportWindow.g.cs
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\PrintPreviewWindow.g.cs
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\SaveTemplateWindow.g.cs
@@ -108,5 +111,3 @@ C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\refint\curs.
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\curs.pdb
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\curs.genruntimeconfig.cache
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\ref\curs.dll
-C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\CreateBusinessCardWindow.baml
-C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\Views\Dialogs\CreateBusinessCardWindow.g.cs

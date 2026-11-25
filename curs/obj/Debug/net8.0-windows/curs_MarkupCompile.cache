@@ -1,20 +1,20 @@
 ﻿curs
-
+1.0.0.0
 
 winexe
 C#
 .cs
 C:\Users\zatway\Desktop\cursovoq\curs\curs\obj\Debug\net8.0-windows\
-curs_g4wkv1qj_wpftmp
+curs
 none
 false
-TRACE;RELEASE;NET;NET8_0;NETCOREAPP
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\zatway\Desktop\cursovoq\curs\curs\App.xaml
 5-1488919756
 
-28-661002755
-424-810220962
+24715858395
+2121287676391
 MainWindow.xaml;Views\Dialogs\CreateBusinessCardWindow.xaml;Views\Dialogs\ExportWindow.xaml;Views\Dialogs\PrintPreviewWindow.xaml;Views\Dialogs\SaveTemplateWindow.xaml;
 
-False
+True
 

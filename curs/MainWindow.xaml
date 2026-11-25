@@ -92,7 +92,7 @@
             <DockPanel Margin="16,0">
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
                     <Button Content="Предпросмотр" Margin="0,0,8,0" />
-                    <Button Content="Сохранить" Background="#176B58" Foreground="White" BorderBrush="#176B58" Margin="0" />
+                    <Button Content="Сохранить" Click="SaveCardClick" Background="#176B58" Foreground="White" BorderBrush="#176B58" Margin="0" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <!-- заголовок панели инструментов -->
@@ -110,8 +110,8 @@
                               Margin="0,0,12,0"
                               Checked="ShowHeadersCheckBoxChanged"
                               Unchecked="ShowHeadersCheckBoxChanged" />
-                    <Button Content="Новая" Margin="0,0,6,0" />
-                    <Button Content="Открыть" Margin="0,0,6,0" />
+                    <Button Content="Новая" Click="NewCardClick" Margin="0,0,6,0" />
+                    <Button Content="Открыть" Click="OpenCardClick" Margin="0,0,6,0" />
                     <Button Content="Текст" Margin="0,0,6,0" />
                     <Button Content="Изображение" Margin="0,0,6,0" />
                     <Button Content="Фигура" Margin="0" />
