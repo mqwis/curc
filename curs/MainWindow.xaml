@@ -73,11 +73,11 @@
                         <MenuItem Header="Открыть..." />
                         <MenuItem Header="Сохранить" />
                         <Separator />
-                        <MenuItem Header="Экспорт..." />
+                        <MenuItem Header="Экспорт..." Click="ExportCardClick" />
                         <MenuItem Header="Печать..." />
                     </MenuItem>
                     <MenuItem Header="Правка">
-                        <MenuItem Header="Отменить" />
+                        <MenuItem Header="Отменить" Click="UndoClick" />
                         <MenuItem Header="Повторить" />
                     </MenuItem>
                     <MenuItem Header="Справка">
@@ -231,7 +231,7 @@
                     </StackPanel>
                 </DockPanel>
 
-                <Border Grid.Row="1" Background="#E6EAE5" BorderBrush="{StaticResource LineBrush}" BorderThickness="1">
+                <Border x:Name="CardPreview" Grid.Row="1" Background="#E6EAE5" BorderBrush="{StaticResource LineBrush}" BorderThickness="1">
                     <Viewbox Stretch="Uniform" Margin="28">
                         <Border Width="540" Height="300" Background="#FFFFFF" BorderBrush="#D5DCD6" BorderThickness="1">
                             <Grid>

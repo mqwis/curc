@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using Microsoft.EntityFrameworkCore;
-using curs.Data;
+using Microsoft.Win32;
 using curs.Data.Models;
+using curs.Services;
 
 namespace curs;
 
@@ -10,6 +10,9 @@ namespace curs;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private readonly CardEditorFacade editor = new();
+    private IEditorCommand? lastCommand;
+
     // открывает главное окно и viewmodel
     public MainWindow()
     {
@@ -37,7 +40,9 @@ public partial class MainWindow : Window
     {
         if (DataContext is MainViewModel viewModel)
         {
-            viewModel.SelectedElementName = "Имя и фамилия";
+            var command = new ResetNameCommand(viewModel);
+            command.Execute();
+            lastCommand = command;
         }
     }
 
@@ -56,13 +61,6 @@ public partial class MainWindow : Window
     {
         try
         {
-            var options = new DbContextOptionsBuilder<BusinessCardDbContext>()
-                .UseNpgsql("Host=localhost;Port=5432;Database=business_cards;Username=postgres;Password=123")
-                .Options;
-
-            using var context = new BusinessCardDbContext(options);
-            var service = new CardService(context);
-
             if (DataContext is not MainViewModel viewModel)
             {
                 return;
@@ -76,12 +74,12 @@ public partial class MainWindow : Window
                 BackgroundColor = "#FFFFFF"
             };
 
-            await service.SaveAsync(card);
+            await editor.SaveAsync(card);
             MessageBox.Show("Визитка сохранена", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-        catch (Exception exception)
+        catch (Exception)
         {
-            MessageBox.Show(exception.Message, "Ошибка сохранения", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Не удалось сохранить визитку. Проверьте подключение к PostgreSQL.", "Ошибка сохранения", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 
@@ -97,13 +95,7 @@ public partial class MainWindow : Window
                 return;
             }
 
-            var options = new DbContextOptionsBuilder<BusinessCardDbContext>()
-                .UseNpgsql("Host=localhost;Port=5432;Database=business_cards;Username=postgres;Password=123")
-                .Options;
-
-            using var context = new BusinessCardDbContext(options);
-            var service = new CardService(context);
-            var card = await service.LoadAsync(cardId);
+            var card = await editor.LoadAsync(cardId);
 
             if (card == null)
             {
@@ -118,9 +110,42 @@ public partial class MainWindow : Window
 
             MessageBox.Show("Визитка загружена", "Открытие", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-        catch (Exception exception)
+        catch (Exception)
         {
-            MessageBox.Show(exception.Message, "Ошибка открытия", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Не удалось открыть визитку. Проверьте номер и подключение к PostgreSQL.", "Ошибка открытия", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
+    // экспортирует холст в png
+    private void ExportCardClick(object sender, RoutedEventArgs e)
+    {
+        var dialog = new SaveFileDialog
+        {
+            Filter = "Изображение PNG|*.png",
+            FileName = "Визитка.png"
+        };
+
+        if (dialog.ShowDialog() == true)
+        {
+            try
+            {
+                editor.ExportPng(CardPreview, dialog.FileName);
+                MessageBox.Show("Визитка экспортирована", "Экспорт", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Ошибка экспорта", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+    }
+
+    // отменяет последнюю команду
+    private void UndoClick(object sender, RoutedEventArgs e)
+    {
+        if (lastCommand != null)
+        {
+            lastCommand.Undo();
+            lastCommand = null;
         }
     }
 }
